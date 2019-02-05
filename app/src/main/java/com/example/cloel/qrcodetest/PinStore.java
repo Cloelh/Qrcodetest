@@ -22,9 +22,9 @@ class PinStore {
 
     public PinStore() {
         point =  new HashMap<>();
-        point.put("abc", new Sprite(R.mipmap.canon,1000,500));
-        point.put("def", new Sprite(R.mipmap.canon,1500,000));
-        point.put("ghi", new Sprite(R.mipmap.canon,500,500));
+        point.put("abc", new Sprite(R.mipmap.pin,1000,500,0));
+        point.put("def", new Sprite(R.mipmap.pin,1500,000,1));
+        point.put("ghi", new Sprite(R.mipmap.pin,500,500,2));
     }
 
     public void set(String qrcode) {

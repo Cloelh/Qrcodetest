@@ -53,7 +53,7 @@ public class MapView extends View {
 
         // Chargement des feuilles de sprites
 
-        SpriteSheet.register(R.mipmap.canon,1,1,this.getContext());
+        SpriteSheet.register(R.mipmap.pin,2,2,this.getContext());
         SpriteSheet.register(R.mipmap.plan_haut,1,1,this.getContext());
 
 
