@@ -20,11 +20,11 @@ import com.example.cloel.qrcodetest.utils.SpriteSheet;
     public boolean visible;
 
 
-    Sprite(int id, float x, float y) {
+    Sprite(int id, float x, float y, int state) {
         this.sprite = SpriteSheet.get(id);
         this.x = x;
         this.y = y;
-        state = 0;
+        this.state = state;
         visible = false;
     }
 
