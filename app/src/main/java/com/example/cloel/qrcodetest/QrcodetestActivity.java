@@ -53,10 +53,18 @@ public class QrcodetestActivity extends AppCompatActivity implements ZXingScanne
         editor.putString("dernier", rawResult.getText());
         editor.commit();
 
+        MapView mapView = findViewById(R.id.mapView);
+        mapView.addPoint( rawResult.getText());
+
+
         mScannerView.resumeCameraPreview(this);
     }
 
     public void popup(View view){
+            MapView mapView = findViewById(R.id.mapView);
+            mapView.addPoint("abc");
+
+
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
 // 2. Chain together various setter methods to set the dialog characteristics
