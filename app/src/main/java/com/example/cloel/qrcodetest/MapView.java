@@ -23,7 +23,7 @@ public class MapView extends View {
     //liste des sprites à afficher
 
 
-    private PinStore pinStore;
+    public PinStore pinStore;
 
 
     public MapView(Context context) {
@@ -153,10 +153,10 @@ public class MapView extends View {
         transform.invert(reverse);
     }
 
-    public void addPoint(String qrcode) {
+    public Sprite addPoint(String qrcode) {
 
-        pinStore.set(qrcode);
         invalidate();
+        return pinStore.set(qrcode);
 
     }
 

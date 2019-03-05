@@ -1,10 +1,9 @@
 package com.example.cloel.qrcodetest;
 
+import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Point;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,15 +21,15 @@ class PinStore {
 
     public PinStore() {
         point =  new HashMap<>();
-        point.put("abc", new Sprite(R.mipmap.pin,1000,500,0));
-        point.put("def", new Sprite(R.mipmap.pin,1500,000,1));
-        point.put("ghi", new Sprite(R.mipmap.pin,500,500,2));
+        point.put("abc", new Sprite(R.mipmap.pin,1000,500,0, "titre_abc", "contenu_abc"));
+        point.put("def", new Sprite(R.mipmap.pin,1500,000,1, "titre_def", "contenu_def"));
+        point.put("ghi", new Sprite(R.mipmap.pin,500,500,2, "titre_ghi", "contenu_abc"));
     }
 
-    public void set(String qrcode) {
+    public Sprite set(String qrcode) {
         Sprite sprite = point.get(qrcode);
         if (sprite != null) sprite.visible = true;
-
+        return sprite;
     }
 
     public void paint(Canvas canvas) {
