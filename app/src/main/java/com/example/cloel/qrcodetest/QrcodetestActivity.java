@@ -88,15 +88,17 @@ public class QrcodetestActivity extends AppCompatActivity implements ZXingScanne
         editor.commit();
 
         MapView mapView = findViewById(R.id.mapView);
-        mapView.addPoint( rawResult.getText());
-
-
+        Sprite sprite = mapView.addPoint( rawResult.getText());
+//        PinStore pinStore = mapView.pinStore;
+        if(sprite != null){
+            sprite.pop(this);
+//            mapView.newPop(this,sprite);
+        }
         mScannerView.resumeCameraPreview(this);
     }
 
     public void popup(View view){
             MapView mapView = findViewById(R.id.mapView);
-            mapView.addPoint("abc");
 
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
