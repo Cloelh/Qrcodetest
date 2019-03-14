@@ -13,8 +13,8 @@ import com.example.cloel.qrcodetest.utils.SpriteSheet;
 public class MapView extends View {
 
     // taille de l'écran virtuel
-    public final static int SIZE_X = 2000;
-    public final static int SIZE_Y = 1500;
+    public final static int SIZE_X = 1171;
+    public final static int SIZE_Y = 1000;
 
     // transformation (et son inverse)
     private Matrix transform;
@@ -54,7 +54,7 @@ public class MapView extends View {
         // Chargement des feuilles de sprites
 
         SpriteSheet.register(R.mipmap.pin,2,2,this.getContext());
-        SpriteSheet.register(R.mipmap.plan_haut,1,1,this.getContext());
+        SpriteSheet.register(R.mipmap.map_haut,1,1,this.getContext());
 
 
         transform = new Matrix();
@@ -111,7 +111,7 @@ public class MapView extends View {
 
         canvas.concat(transform);
 
-        SpriteSheet.get(R.mipmap.plan_haut).paint(canvas,0,0,0);
+        SpriteSheet.get(R.mipmap.map_haut).paint(canvas,0,0,0);
 
         pinStore.paint(canvas);
 
